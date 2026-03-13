@@ -1,0 +1,39 @@
+indice de quadrillage démarre de 0
+
+Tour de jeu : 
+
+- Modification du lab : Dans les col et raw impaires, on insère la tuile supplémentaire. La tuile expulsée deviens la nouvelle tuile supplémentaire
+     => !!!!! Attention on ne peut jamais remettre la tuile nouvelle tuile à sa position de départ
+     => Si en ajoutant la tuile un joueur est expulsée du plateau, alors son pion est placé de l'autre côté de la ou il a été éxpulsé 
+
+
+
+- Déplacement du pion 
+
+Déplacement du pion dans un couloir inintérompu, en suivant le laby jusqu'à un cul de sac 
+Il est possible de ne pas le déplacer
+Si on trouve le trésor lors de son tour le joueur peut avancer encore de 10 cases pour trouver/se raproché de son nouveau trésor
+La partie se fini lorsque on a trouvé tous les trésor 
+
+
+CONSIGNE : Ecrire un programme qui pourra communiquer avec le serveur : pour 
+
+
+x = lignes et Y = colonnes
+
+
+
+
+
+
+
+
+Il faut qu'il démarre une partie et joue un coup et récupère un coup de l'adversaire. Il faut donc que le lab connaisse à chaque instant l'état du lab
+
+
+API : 
+
+CHAQUE TUILE = 5 entiers : NESOT
+
+Mur au : NORD SUD EST OUEST TRESOR  si 1 = présent et le tout dans une chaîne de caractère
+
