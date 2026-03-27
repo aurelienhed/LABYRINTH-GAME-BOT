@@ -44,7 +44,7 @@ Copyright 2016-2020 T. Hilaire, J. Brajard
 */
 int sockfd = -1;		        /* socket descriptor, equal to -1 when we are not yet connected */
 char buffer[MAX_LENGTH];		/* global buffer used to send message (global so that it is not allocated/desallocated for each message) */
-int debug=0;			        /* debug constant; we do not use here a #DEFINE, since it allows the client to declare 'extern int debug;' set it to 1 to have debug information, without having to re-compile labyrinthAPI.c */
+int debug=;			        /* debug constant; we do not use here a #DEFINE, since it allows the client to declare 'extern int debug;' set it to 1 to have debug information, without having to re-compile labyrinthAPI.c */
 char playerName[21] = {};       /* name of the player, stored to display it in debug */
 
 

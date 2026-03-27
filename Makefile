@@ -7,7 +7,7 @@ LIBS =
 LIBSDIR = 
 
 # fichiers du projet
-SRC = main.c APIS/labyrinthAPI.c APIS/clientAPI.c
+SRC = main.c APIS/labyrinthAPI.c APIS/clientAPI.c Data/data.c
 OBJ = $(SRC:.c=.o)
 EXEC = main
 
@@ -18,6 +18,7 @@ all: $(EXEC)
 # dépendance des .h
 clientAPI.o: APIS/clientAPI.h
 labyrinthAPI.o: APIS/labyrinthAPI.h
+data.o: Data/data.h
 # règles de compilation
 %.o: %.c
 	$(CC) $(CCFLAGS) -o $@ -c $<
@@ -31,3 +32,4 @@ clean:
 	rm -f *.o
 mproper:
 	rm -f $(EXEC) *.o
+	rm -f APIS/*.o
