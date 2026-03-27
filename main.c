@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "clientAPI.h"
-#include "labyrinthAPI.h"
+#include "APIS/clientAPI.h"
+#include "APIS/labyrinthAPI.h"
 
 
 
@@ -23,7 +23,7 @@ int main(){
     int start = getLabyrinth(labyData);
     t_return_code winningStatus = NORMAL_MOVE;
     
-    printLabyrinth();
+
 
 
     
@@ -31,19 +31,28 @@ int main(){
 
 
 
-    while(winningStatus == NORMAL_MOVE){
+    while(winningStatus == 0){
+        printLabyrinth(); // affiche le labyrinthe
 
         
 
         if (start == 0){
             printf("Your turn to play\n");
-            printf("What's your turn\n");
-            
-            /*scanf();
-            winningStatus = sendMove();
-            printLabyrinth();
-            */
-            
+            char * move = malloc(sizeof(char) *20);
+            char * message = malloc(sizeof(char)*  50);
+            message = "Héhéhé";
+            int n1;
+            int n2;
+            int n3;
+            int n4;
+            int n5;
+            printf("Your Move\n");
+            scanf("%d %d %d %d %d", &n1, &n2, &n3, &n4, &n5);
+            sprintf(move, "%d %d %d %d %d", n1, n2, n3, n4, n5);
+            printf("Your move is %s \n", move);           
+            winningStatus = sendMove(move, message);
+            start = 1;
+
         }
         else{
             printf("The opponent's turn\n");
@@ -54,7 +63,7 @@ int main(){
             printf("%s\n\n",move);
             printf("Le message est\n");
             printf("%s\n\n",msg);
-            printLabyrinth();
+            start = 0;
 
         }
 
