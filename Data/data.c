@@ -15,9 +15,6 @@ void setDataLaby(t_labyrintheInfos laby, char * labyData,int sizeX, int sizeY){
 
 
 
-
-
-
     laby.plateau = plateau;
 }
 

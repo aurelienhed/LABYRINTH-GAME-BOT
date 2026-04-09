@@ -37,3 +37,50 @@ CHAQUE TUILE = 5 entiers : NESOT
 
 Mur au : NORD SUD EST OUEST TRESOR  si 1 = présent et le tout dans une chaîne de caractère
 
+
+
+
+
+-------------------------Séance de Cours : Mise au point du 09/04/2026
+Stocker une partie 
+
+-labyrinthe
+-qui joue
+-pièce supp
+-taille
+
+
+
+
+Stocker un coup
+
+une fonction qui créer le laby initial
+
+une fonction qui joue un coup : met à jour le labyrinthe (données)
+
+fonction qui trouve un bon coup
+
+une fonction qui affiche le labyrinthe pour vérifier que les données sont 
+
+
+Structure pour sauvegarder les données
+typedef struct {
+	int sizeX, sizeY; 
+
+
+
+} t_game;
+
+
+
+typedef struct{
+
+	
+	
+
+
+
+
+}t_tile;
+
+
